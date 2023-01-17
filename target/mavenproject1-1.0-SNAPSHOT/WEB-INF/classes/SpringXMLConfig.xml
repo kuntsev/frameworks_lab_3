@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    
+    <bean id="Document" class="ua.edu.sumdu.Document" scope="prototype">
+        <constructor-arg value="Java OOP"></constructor-arg>
+        <constructor-arg value="Java EE"></constructor-arg>
+        <constructor-arg value="Frameworks"></constructor-arg>
+    </bean>   
+    <bean id="Subject" class="ua.edu.sumdu.Subject" scope="prototype">
+    </bean>
+    <bean id="Student" class="ua.edu.sumdu.Student" scope="prototype">
+        <property name="doc" ref="Document"></property>
+    </bean>      
+</beans>

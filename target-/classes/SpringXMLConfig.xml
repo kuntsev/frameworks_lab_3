@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <beans id="Id" class="sumdu.edu.ua.Support.IdGenerator">
+    </beans>
+    <beans id="Doc" class="sumdu.edu.ua.Document" scope="prototype">
+        <constuctor-arg value="Java OOP"></constuctor-arg>
+        <constuctor-arg value="Java EE"></constuctor-arg>
+        <constuctor-arg value="Frameworks></constuctor-arg>
+    </beans>   
+    <beans id="Subject" class="sumdu.edu.ua.Subject" scope="prototype">
+    </beans>
+    <beans id="Student" class="sumdu.edu.ua.Student" scope="singleton">
+        <property name="doc" ref="Doc"></property>
+    </beans>      
+</beans>
